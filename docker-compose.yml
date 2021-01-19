@@ -33,7 +33,8 @@ services:
     volumes:
       - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
     networks:
-      - static-network
+      static-network:
+        ipv4_address: 172.20.128.5
 
 networks:
   static-network:
